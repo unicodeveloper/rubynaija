@@ -1,0 +1,67 @@
+<%= content_for :body do %>
+<%= form_for( @project, class: "form-horizontal", role: "form" ) do |f| %>
+<div class="container" style="margin-top:50px;">
+
+    <div class="container" style="margin-top:20px;">
+
+    
+            <div class="row" style="margin-bottom:40px;">
+                <div class="col-md-8 col-md-offset-2">
+                   <h1>You Developed a Project with Ruby on Rails?</h1>
+
+                   <h3>Let the Nigerian Developer Community Know About It</h3>
+
+                    <% if notice %>
+                        <p class="bg-success" style="padding:10px;border-radius:5px;">
+                            <button type="button" class="close" data-dismiss="alert">&times;</button>
+                              <%= notice %>
+                        </p>
+                    <% end %>    
+
+                    <% if @project.errors.any? %>
+         
+                          <p class="bg-danger" style="padding:10px;border-radius:5px;">
+                              <button type="button" class="close" data-dismiss="alert">&times;</button>
+                                Oops! Please check the form below for errors.
+                          </p>
+                    <% end %>
+                  
+                   <b>PLEASE NOTE: </b>
+                        
+                   <p>Please do not post multiple times. If you submit the same site more than once, the latest submission will be used</p>
+
+                   <p><%= f.text_field :name, class: "form-control", placeholder: "Name of the Project/Site" %></p>
+                   <% if @project.errors.any? %> <p class="text-danger"><%= @project.errors.full_messages.at(0) %> </p> <% end %>
+
+                   <p><%= f.text_field :url, class: "form-control", placeholder: "URL of the Project/Site" %></p>
+                   <% if @project.errors.any? %> <p class="text-danger"><%= @project.errors.full_messages.at(1) %> </p> <% end %>
+
+                   <p><%= f.text_area :description, class: "form-control", placeholder: "Describe the Project", rows: 2, cols: 50 %></p>
+                   <% if @project.errors.any? %> <p class="text-danger"><%= @project.errors.full_messages.at(2) %> </p> <% end %>
+
+
+                  <p><%= f.select(:categories,
+                    [ ['Business'],['E-commerce'],['Blogs'],['Uncategorized'],['Open Source'],['User driven'],['Portfolio'],['Customer Support'],
+                    ['Medical'],['Agency'],['Travel'],['Entertainment'],['Fashion'],['Education']],
+                    {},{ class: "form-control", placeholder: "Choose Categories for this site", id: "categories" }) %></p>
+                  <% if @project.errors.any? %> <p class="text-danger"><%= @project.errors.full_messages.at(3) %> </p> <% end %>
+
+
+                  <p><%= f.select(:tags,
+                    [ ['Blog'],['Bootstrap'],['Blogs'],['CMS'],['Foundation'],['gallery'],['Gumby'],['Packages'],
+                    ['Photos'],['Social'],['Wardrobe CMS']],
+                    {},{ class: "form-control", placeholder: "Choose tags for this site", id: "tags" }) %></p>
+                  <% if @project.errors.any? %> <p class="text-danger"><%= @project.errors.full_messages.at(5) %> </p> <% end %>
+
+                 
+                     <%= f.hidden_field :approval_status, :value => "0" %>
+                     <p><%= f.email_field :email, class: "form-control", placeholder: "Your email (optional)" %></p>
+                  <% if @project.errors.any? %> <p class="text-danger"><%= @project.errors.full_messages.at(7) %> </p> <% end %>
+
+                     <p><%= f.button "Submit Site", class:"btn btn-success btn-lg btn-block" %></p>
+                 </div>
+                </div>
+            <% end %>
+            </div>
+    </div>  
+<% end %>
