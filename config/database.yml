@@ -24,3 +24,4 @@ production:
   adapter: postgresql
   encoding: unicode
   pool: 5
+  database: <%= ENV["HEROKU_POSTGRESQL_ONYX_URL"] %>
