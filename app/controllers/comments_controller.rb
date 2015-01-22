@@ -6,5 +6,6 @@ class CommentsController < ApplicationController
 			redirect_to @post, notice: 'Comment was successfully created'
 		else
 			redirect_to @post, alert: 'Error creating Comment'
+		end
 	end
 end
