@@ -1,6 +1,7 @@
 class DevelopersController < ApplicationController
   layout "dev"
-  # GET /posts.json
+  
+  
   def index
     @developers = Developer.all
   end
