@@ -5,7 +5,7 @@ machine:
 
 dependencies:
   bundler:
-    without: [production, osx]
+    without: [production, development]
 
 test:
   post:
