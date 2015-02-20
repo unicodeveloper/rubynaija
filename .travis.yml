@@ -6,4 +6,12 @@ rvm:
   - 1.9.3
   - 1.9.2
 
-script: bundle exec rspec spec
+env:
+  - TEST_SUITE=features
+  - TEST_SUITE=controllers
+  - TEST_SUITE=helpers
+  - TEST_SUITE=models
+  - TEST_SUITE=routing
+  - TEST_SUITE=views
+
+script: bundle exec rspec spec/$TEST_SUITE/*
