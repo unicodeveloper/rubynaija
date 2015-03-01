@@ -8,7 +8,7 @@ RSpec.feature "Developer registration", js: true do
     # verify that we get the expected result
     visit new_developer_path
     fill_in "Name", with: "Prosper"
-    fill_in "Email", with: "prosperotemuyiwa@gmail.com"
+    #fill_in "Email", with: "prosperotemuyiwa@gmail.com"
     # fill_in ":url", with: "http://prosperotemuyiwa.com"
     # fill_in ":work_place", with: "Andela"
     # fill_in ":code_name", with: "unicodeveloper"
