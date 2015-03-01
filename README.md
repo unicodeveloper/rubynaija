@@ -11,6 +11,6 @@ Rubynaija aims to bring together Rails Developers across Nigeria and grow to bec
 #Contact Me
 To report a bug, suggest improvements to rubynaija.com, please open a [ Github issue ](https://github.com/busayo/rubynaija/issues)
 
-Follow me on Twitter @unicodeveloper
+Follow me on Twitter [ @unicodeveloper ](https://twitter.com/unicodeveloper )
 
 
