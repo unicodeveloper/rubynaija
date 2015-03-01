@@ -8,3 +8,9 @@ Rubynaija is a repository of projects crafted with the Rails Framework by Nigeri
 
 Rubynaija aims to bring together Rails Developers across Nigeria and grow to become a hub for Nigerian Ruby on Rails Developers. A community where other Nigerian Developers see what their fellow counterparts in thesame country are working on and get to be able to contact them easily.
 
+#Contact Me
+To report a bug, suggest improvements to rubynaija.com, please open a (https://github.com/busayo/rubynaija/issues) GitHub issue.
+
+Follow me on Twitter @unicodeveloper
+
+
